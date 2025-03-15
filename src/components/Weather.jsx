@@ -21,12 +21,11 @@ import humidity1_icon from "../assets/Humidity1.png"
 
 const Weather = () => {
 
-    const inputRef = useRef ()
+    const inputRef = useRef ();
 
     const [weatherData, setWeatherData] = useState(false);
 
-    const [hasSearched, setHasSearched] = useState(false);
-
+   
     const allIcons = {
         "01d":clear_icon,
         "01n":moon_icon,
@@ -48,10 +47,6 @@ const Weather = () => {
 
 
 const search = async (city) =>{
-
-    if (!hasSearched && city === "") {
-        return; // Skip alert on first render
-    }
 
     if(city === ""){
         alert("Enter City Name");
@@ -86,16 +81,12 @@ const search = async (city) =>{
 
     } catch (error) {
         setWeatherData(false);
-        console.log("Error in Fetching Weather Data");
-        
+        console.error("Error in Fetching Weather Data");     
     }
-    setHasSearched(true); // After the first search, set hasSearched to true
-
 }
 
-
     useEffect (()=>{
-        search("")
+        search("Pune")
     },[]);
 
   return (
@@ -106,8 +97,9 @@ const search = async (city) =>{
             <i className="fa-solid fa-magnifying-glass "></i>
             </span>
         </div>
-        
-            <img src={weatherData.icon} alt="" className='weather-icon' />
+        {weatherData?
+        <>
+         <img src={weatherData.icon} alt="" className='weather-icon' />
         <p className="temperature">{weatherData.temperature}°c</p>
         <p className="location">{weatherData.location}</p>
         <div className="weather-data">
@@ -115,7 +107,7 @@ const search = async (city) =>{
             <img src={humidity_icon} alt="humidity" />
             <div><p>{weatherData.humidity}%</p>
             <span>Humidity</span>
-            </div>
+            </div> 
           </div>
           <div className="col">
             <img src={wind} alt="humidity" />
@@ -125,8 +117,8 @@ const search = async (city) =>{
             </div>
           </div>
         </div>
+        </>:<></>}
        
-        
     </div>
   )
 }
