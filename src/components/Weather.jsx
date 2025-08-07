@@ -86,7 +86,7 @@ const search = async (city) =>{
 }
 
     useEffect (()=>{
-        search("Pune")
+        search("Patna")
     },[]);
 
   return (
@@ -97,7 +97,7 @@ const search = async (city) =>{
             <i className="fa-solid fa-magnifying-glass "></i>
             </span>
         </div>
-        {weatherData?
+        { weatherData?
         <>
          <img src={weatherData.icon} alt="" className='weather-icon' />
         <p className="temperature">{weatherData.temperature}°c</p>
@@ -117,7 +117,8 @@ const search = async (city) =>{
             </div>
           </div>
         </div>
-        </>:<></>}
+        </>:<></>
+        }
        
     </div>
   )
