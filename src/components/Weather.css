@@ -79,8 +79,13 @@
     margin-top: 10px;
 }
 
-/* 🔽 Mobile Devices (up to 576px) */
+/* ✅ Small Phones (up to 576px) */
 @media (max-width: 576px) {
+  .weather {
+    width: 70%;
+    padding: 20px 16px;
+  }
+
   .search-bar {
     flex-direction: row;
     gap: 8px;
@@ -91,29 +96,27 @@
     flex: 1;
     font-size: 14px;
     height: 44px;
-    padding-left: 16px;
+    padding-left: 14px;
   }
 
   .icon {
     width: 44px;
     height: 44px;
-    padding: 0;
     font-size: 16px;
+    padding: 0;
   }
 
   .weather-icon {
     width: 90px;
-    margin: 20px 0;
+    margin: 18px 0;
   }
 
   .temperature {
     font-size: 50px;
-    text-align: center;
   }
 
   .location {
     font-size: 24px;
-    text-align: center;
   }
 
   .weather-data {
@@ -124,8 +127,8 @@
 
   .col {
     font-size: 18px;
-    text-align: center;
     justify-content: center;
+    text-align: center;
   }
 
   .col span {
@@ -134,12 +137,16 @@
 
   .col img {
     width: 22px;
-    margin: 0;
   }
 }
 
-/* 🔽 Tablets (577px to 768px) */
+/* ✅ Tablets (577px to 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
+  .weather {
+    width: 80%;
+    padding: 28px;
+  }
+
   .search-bar input {
     font-size: 16px;
     height: 48px;
@@ -176,8 +183,13 @@
   }
 }
 
-/* 🔽 Small Laptops (769px to 1024px) */
+/* ✅ Small Laptops (769px to 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .weather {
+    width: 65%;
+    padding: 35px;
+  }
+
   .search-bar input {
     font-size: 17px;
     height: 50px;
@@ -198,5 +210,14 @@
 
   .location {
     font-size: 32px;
+  }
+}
+
+/* ✅ Desktop and Up (1025px and above) */
+@media (min-width: 1025px) {
+  .weather {
+    width: 500px;
+    padding: 40px;
+    max-width: 90%;
   }
 }
