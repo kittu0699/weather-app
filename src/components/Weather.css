@@ -89,13 +89,13 @@
   .search-bar {
     flex-direction: row;
     gap: 8px;
-    width: 100%;
   }
 
   .search-bar input {
     flex: 1;
     font-size: 14px;
     height: 44px;
+    width: 50%;
     padding-left: 14px;
   }
 
