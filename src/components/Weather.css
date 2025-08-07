@@ -216,7 +216,6 @@
 /* ✅ Desktop and Up (1025px and above) */
 @media (min-width: 1025px) {
   .weather {
-    width: 500px;
     padding: 40px;
     max-width: 90%;
   }
