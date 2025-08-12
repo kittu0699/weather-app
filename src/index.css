@@ -11,5 +11,11 @@
 .app{
     height: 100vh;
     display: grid;
-    background: linear-gradient(45deg,#0b465b,#a52bce);
+    /* background: linear-gradient(45deg,#0b465b,#a52bce); */
+    background-image: url("./assets/weather.jpg");
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
    }
+
+   

@@ -90,9 +90,11 @@ const search = async (city) =>{
     },[]);
 
   return (
+    <div>
+        <h1 className="heading">WEATHER APP</h1>
     <div className='weather'>
         <div className="search-bar">
-            <input ref={inputRef} type="text" placeholder='Search' />
+            <input ref={inputRef} type="text" placeholder='Enter City Name' />
             <span className='icon' onClick={()=>search(inputRef.current.value)}>
             <i className="fa-solid fa-magnifying-glass "></i>
             </span>
@@ -120,6 +122,7 @@ const search = async (city) =>{
         </>:<></>
         }
        
+    </div>
     </div>
   )
 }
